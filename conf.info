@@ -1,0 +1,5 @@
+sddm		/usr/lib/sddm/sddm.conf.d/default.conf
+sddm脚本文件	/usr/share/sddm/scripts
+apache2		/etc/httpd/conf/httpd.conf
+apache2默认网页文件/srv/http/html/index
+

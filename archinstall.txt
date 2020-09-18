@@ -1,0 +1,23 @@
+#先是启动sddm没有开启我在.xinitrc中配置的，壁纸/渲染等
+这个地方我把sddm和startx的关系弄混了。
+sddm和startx是同级别的东西，只有使用startx才会读取xinitrc中的内容。
+sddm的配置文件在/usr/lib/sddm/sddm/sddm.conf.d/default.con
+
+#然后解决没有声音的问题
+一开始搜教程，看配置的没啥问题死活没声音
+这个声音问题真是气气气死我了
+最后在wiki论坛上看一个帖子说是少了一个驱动包
+pacman -S sof-firmware
+这下有声音了
+还有一个问题就是，我在alsamixer中设置的声音，不会保存
+每次开机都要手动开启声音，这个有点烦了，明天在想想办法
+总之基本问题是解决了，nice的一天，哈哈哈哈
+
+哈哈哈，一大早就百度到解决方法了
+slsactl store
+来保存声音配置就行了
+
+安装中文字体
+yay -S wqy-bitmapfont wqy-microhei wqy-microhei-lite wqy-zenhei adobe-source-han-mono-cn-fonts adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts
+安装emoji
+yay -S ttf-linux-libertine ttf-inconsolata ttf-joypixels ttf-twemoji-color noto-fonts-emoji ttf-liberation ttf-droid

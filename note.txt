@@ -1,0 +1,68 @@
+预览sddm主题	sddm-greeter --test-mode --theme 主题文件夹
+
+在alsamixer调整声音后保存为默认配置	alsactl store
+
+强制tty用户下线	pkill -9 -t tty1
+
+把用户添加到某用户组	sudo gpasswd -a <username> <group>
+  -d	为删除
+
+本地化，语言设置	把/etc/locale.gen中需要的语言取消注释--> 
+			写入配置文件locale.conf,LANG=zh_CN.UTF-8 -->
+			使用locale-gen更新locale配置
+			使用locale命令查看本地化
+
+查看电量	acpi
+
+查看屏幕亮度	xbacklight
+调节屏幕亮度	xbacklight -set $百分比
+
+更新grub	grub-mkconfig -o /boot/grub/grub.cfg
+
+同步系统时间	ntpdate cn.pool.ntp.org
+把当前系统时间写入主板   hwclock -w  (hw:hardware)
+查看当前主板写入的时间   hwclock -r
+
+设置bc精度	scale=3
+
+#软件
+图形化文件管理	caja
+图片查看器	nomacs
+壁纸软件	nitrogen
+修复命令	fuck
+查看英文缩写含义wtf
+查看网络流量	nload
+吃豆人		kapman
+
+
+#nmcli命令
+扫描wifi	nmcli dev wifi
+连接wifi	nmcli dev wifi connect $wifi名 password $密码
+查看已连接wifi	nmcli conn
+
+#dwm使用教程
+alt+num		移动到指定标签
+alt+shift+enter	打开终端
+alt+shift+c	关闭窗口
+alt+j/k		左右移动到同一标签下下一个窗口
+alt+enter	把该窗口提权为主窗口
+alt+m		全屏该窗口
+alt+space	退出全屏
+alt+b		隐藏dwm-bar
+alt+tab		在该标签和上一个标签进行切换
+alt+[left mouse]移动窗口
+alt+[right mouse]改变窗口大小
+
+
+#终于能翻墙了
+* 工具v2ray qv2ray
+* 1. sudo qv2ray
+* 2. chromium  --proxy-server="socks://localhost:1089"
+* 3.呵呵哈哈哈
+#终端翻墙
+export https_proxy=http://127.0.0.1:8889 http_proxy=http://127.0.0.1:8889 all_proxy=socks://127.0.0.1:1089
+
+#arch滚挂处理
+1.能进入系统的，查看/var/log/pacman.log文件，再判断哪个包出了问题，用downgrade命令回滚那个包就ok
+2.不能进入系统的，进入U盘的live环境里面用arch-chroot /mnt进入系统，根据报错信息判断哪个包出了问题，然后进行回滚。
+

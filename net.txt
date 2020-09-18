@@ -1,0 +1,18 @@
+1. 死亡之ping	 sudo ping <ip> -s 65500 -i 0.2
+2. netstat
+ *   netstat -nltp		列出处于监听状态的tcp端口
+	-n			不显示别名
+	-l			(listening)列出处于监听状态的服务
+	-t			仅显示TCP相关选项
+	-p			(process)显示建立相关链接的程序名
+ *   netstat -ap | grep 80 	查看某端口的状态
+	-a			all		
+ *   netstat -rn		查看路由相关信息
+	-r			route	
+3. lsof	（list open file）
+	-a			列出打开文件存在的进程
+	-c <进程名>		列出指定进程打开的文件
+	-p <进程号>		列出指定进程号进程打开的文件	
+	-i <条件>		列出符合条件的进程
+		条件：4（ipv4）、6（ipv6）、协议名、:端口、@ip
+	例：lsof :80 查看那个进程占用了80端口
