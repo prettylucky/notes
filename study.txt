@@ -1,7 +1,27 @@
-ranger
-git
-vi
+# 基础
 算法
 数据结构
 操作系统
-lamp
+
+# 编程
+python
+C
+C++
+java
+PHP
+js
+
+# 服务器
+lamp/lnmp
+python
+html/css/js
+php/mysql
+
+# 想要做的项目
+手撸一个个人小站
+用框架搭建一个博客
+CTF
+
+# 两个就业方向
+前端
+网络安全

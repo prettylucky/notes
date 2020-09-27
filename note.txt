@@ -26,13 +26,17 @@
 设置bc精度	scale=3
 
 #软件
+创建热点        create_ap(acess point)
+(sudo create_ap wlp4s0 enp3s0 SSID PASS)
+剪贴板软件      xsel
+ranger图片预览  ueberzug
 图形化文件管理	caja
-图片查看器	nomacs
-壁纸软件	nitrogen
-修复命令	fuck
+图片查看器	    nomacs
+壁纸软件	      nitrogen
+修复命令	      fuck
 查看英文缩写含义wtf
-查看网络流量	nload
-吃豆人		kapman
+查看网络流量	  nload
+吃豆人		      kapman
 
 
 #nmcli命令
