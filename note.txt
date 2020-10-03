@@ -24,6 +24,9 @@
 查看当前主板写入的时间   hwclock -r
 
 设置bc精度	scale=3
+dmenu只能识别设置环境变量的软件  （如果没有）可以把一个软件的启动脚本放在/usr/local/bin下设置环境变量 
+设置deepin-TIM字体大小   env WINEPREFIX="$HOME/.deepinwine/Deepin-TIM" deepin-wine winecfg
+
 
 #软件
 创建热点        create_ap(acess point)
